@@ -8,13 +8,18 @@ var contador = 1;
 
 buttons.forEach( btn=>{
   btn.addEventListener('click', async () => {
+    btn.classList.remove('active')
     if(btn.dataset.index == 1){
       const personaje = await api.pokemon(++contador)
-    await new Personaje(personaje)
+      await new Personaje(personaje)
+      btn.classList.add('active')
     }else{
       const personaje = await api.pokemon(--contador)
       await new Personaje(personaje)
+      btn.classList.add('active')
+      console.log(personaje.id)
     }
+    
   })
 })
 

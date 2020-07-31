@@ -24,7 +24,6 @@
 .arrow{
   width: 150px;
   height: 150px;
-  background-color: #000950;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,56 +34,42 @@
 }
 
 
-.arrow::before{
-  content: '';
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background: #ca215a;
-  top: 0;
-  left: 0;
-  box-shadow: 0 1px 5px white;
-  
-}
-.arrow::after{
-  content: '';
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background: #ca215a;
-  top: 0;
-  right: 0;
-}
-.btn::after{
-  content: '';
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background: #ca215a;
-  bottom: 0;
-  right: 0;
-}
-.btn::before{
-  content: '';
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background: #ca215a;
-  bottom: 0;
-  left: 0;
-}
+
 
 .arrow a{
-  margin-left: 20px;
-  margin-right: 20px;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
   font-family: system-ui;
   color: white;
-  width: 100%;
-
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px white;
 }
+.arrow a:hover{
+  box-shadow: 0 0 0 1px white;
+  transform: scale(.9);
+}
+
+.rectctangulo{
+  background-color: #000950;
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+}
+
+.btn-two{
+ position: absolute;
+ transform: rotate(90deg);
+ z-index: 1;
+}
+.btn-one{
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 .card{
   background: linear-gradient(to  left top,  #00e5fd 0% , white 100%);
@@ -94,7 +79,8 @@
   justify-content: space-around;
   align-items: center;
   padding: 30px;
-  border-radius: 10px 50px 10px 50px;
+  border-radius: 10px 10px 10px 50px;
+  border: 20px solid #e1e1e1;
 }
 .card > p{
   margin: 20px;
