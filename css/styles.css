@@ -1,0 +1,122 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.container{
+  max-width: 900px;
+  width: 100%;
+  margin: 100px;
+}
+
+.box{
+  width: 400px;
+  height: 600px;
+  margin:0 auto;
+  background-color: #ca215a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+ 
+}
+.arrow{
+  width: 150px;
+  height: 150px;
+  background-color: #000950;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-shadow:1px 1px 3px #000;
+  margin-top: 100px;
+  right: -70px;
+}
+
+
+.arrow::before{
+  content: '';
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: #ca215a;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1px 5px white;
+  
+}
+.arrow::after{
+  content: '';
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: #ca215a;
+  top: 0;
+  right: 0;
+}
+.btn::after{
+  content: '';
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: #ca215a;
+  bottom: 0;
+  right: 0;
+}
+.btn::before{
+  content: '';
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: #ca215a;
+  bottom: 0;
+  left: 0;
+}
+
+.arrow a{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: system-ui;
+  color: white;
+  width: 100%;
+
+}
+
+.card{
+  background: linear-gradient(to  left top,  #00e5fd 0% , white 100%);
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  border-radius: 10px 50px 10px 50px;
+}
+.card > p{
+  margin: 20px;
+  display: inline-block;
+}
+
+.data{
+  width: 50%;
+}
+.container-img{
+  width: 50%;
+  animation: rotate 10s ;
+}
+
+img{
+  width: 120%;
+ 
+}
+
+@keyframes rotate{
+  0% {transform: rotateY(0deg);}
+  50% {transform: rotateY(180deg);}
+  100% {transform: rotateY(0deg);}
+
+}
